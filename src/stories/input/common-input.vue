@@ -7,11 +7,10 @@
         :type="inputType"
         :id="inputLabelID"
         :placeholder="placeholder"
-        @input="updateValue($event.target.value)"
       />
     </label>
-    <span class="validation" v-if="validation">
-      <span v-show="!validation">
+    <span class="validation" >
+      <span v-show="validation">
         {{ validationContent }}
       </span>
     </span>
@@ -26,7 +25,7 @@ export default {
   props: {
     inputLabelID: {
       type: String,
-      default: '',
+      default: '라벨입니다.',
     },
     inputType: {
       type: String,
@@ -37,25 +36,21 @@ export default {
     },
     validationContent: {
       type: String,
-      default: '',
+      default: '벨리데이션 문구입니다.',
     },
     placeholder: {
       type: String,
-      default: '',
+      default: '플레이스 홀더입니다.',
     },
     inputWidth: {
       type: String,
+      default: '100px',
+
     },
     inputBorderRadius: {
       type: String,
+      default: '15px',
     },
-  },
-  setup(props, { emit }) {
-    const selectOptionPicker = '';
-    const updateValue = value => {
-      return emit('SetInputValue', value);
-    };
-    return { updateValue, selectOptionPicker };
   },
 };
 </script>

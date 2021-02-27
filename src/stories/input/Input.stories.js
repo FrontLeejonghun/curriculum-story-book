@@ -10,7 +10,7 @@ export default {
 const Template = (args, { argTypes }) => ({
   props: Object.keys(argTypes),
   components: { commoninput },
-  template: '<common-input v-bind="$props" />',
+  template: '<commoninput v-bind="$props" />',
 });
-export const 기본버튼 = Template.bind({});
+export const 기본인풋 = Template.bind({});
 
